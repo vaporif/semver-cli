@@ -1,10 +1,12 @@
 [package]
-name = "semver-cli"
+name = "semver-cli-check"
 version = "0.1.0"
 edition = "2021"
 authors = ["Onypko Dmytro <vapori@gmail.com>"]
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+repository = "https://github.com/vaporif/semver-cli-check"
+documentation = "https://github.com/vaporif/semver-cli-check"
+keywords = ["cargo", "subcommand", "semver"]
+license-file = "LICENSE"
 
 [profile.release]
 opt-level = 's'
