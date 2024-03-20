@@ -1,4 +1,4 @@
-name: picker distribution
+name: publish to crates
 on:
   push:
     branches:
