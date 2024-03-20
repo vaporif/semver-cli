@@ -1,11 +1,11 @@
-name: picker distribution
+name: publish to crates
 on:
   push:
     branches:
       - "main"
     paths:
       - '!.github/**'
-      - .gitignore
+      - '!.gitignore'
 
 concurrency:
   group: publish
