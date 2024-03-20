@@ -5,6 +5,7 @@ edition = "2021"
 authors = ["Onypko Dmytro <vapori@gmail.com>"]
 repository = "https://github.com/vaporif/semver-cli-check"
 documentation = "https://github.com/vaporif/semver-cli-check"
+description = "cli util to validate semver"
 keywords = ["cargo", "subcommand", "semver"]
 license-file = "LICENSE"
 
