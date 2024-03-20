@@ -4,8 +4,9 @@ on:
     branches:
       - "main"
     paths:
-      - '!.github/**'
-      - '!.gitignore'
+      - 'src/**'
+      - 'Cargo.lock'
+      - 'Cargo.toml'
 
 concurrency:
   group: publish
