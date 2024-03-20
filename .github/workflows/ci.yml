@@ -27,7 +27,6 @@ jobs:
 
   clippy:
     name: Clippy
-    if: ${{ github.actor != 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -42,8 +41,6 @@ jobs:
           args: -- -D warnings
   build:
      name: build
-     needs: pre_ci
-     if: needs.pre_ci.outputs.continue
      runs-on: ubuntu-latest
      timeout-minutes: 45
      steps:
