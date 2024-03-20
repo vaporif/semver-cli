@@ -5,7 +5,7 @@ on:
       - "main"
     paths:
       - '!.github/**'
-      - .gitignore
+      - '!.gitignore'
 
 concurrency:
   group: publish
