@@ -1,0 +1,56 @@
+name: fmt/clippy/build
+
+on: [pull_request]
+
+concurrency:
+  group: build-${{ github.event.number || github.ref }}-pull-request-check
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  fmt:
+    name: Rustfmt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          components: rustfmt
+      - uses: actions-rs/cargo@v1
+        with:
+          command: fmt
+          args: --all -- --check
+
+  clippy:
+    name: Clippy
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          components: clippy
+      - uses: actions-rs/clippy-check@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: -- -D warnings
+  build:
+     name: build
+     needs: pre_ci
+     if: needs.pre_ci.outputs.continue
+     runs-on: ubuntu-latest
+     timeout-minutes: 45
+     steps:
+       - uses: actions/checkout@v4
+       - uses: dtolnay/rust-toolchain@master
+         with:
+           toolchain: 1.76.0
+       - run: cargo check --locked
+       - run: cargo update
+       - run: cargo check
