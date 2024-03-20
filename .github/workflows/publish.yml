@@ -1,12 +1,6 @@
 name: publish to crates
 on:
-  push:
-    branches:
-      - "main"
-    paths:
-      - 'src/**'
-      - 'Cargo.lock'
-      - 'Cargo.toml'
+  workflow_dispatch:
 
 concurrency:
   group: publish
