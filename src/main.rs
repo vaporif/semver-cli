@@ -25,6 +25,6 @@ struct Cli {
         help = "SemVer requirement describing the intersection of some version comparators, such as >=1.2.3, <1.8."
     )]
     requested_version: String,
-    #[arg(help = "SemVer to ckeck")]
+    #[arg(help = "SemVer to check")]
     version_to_test: String,
 }
