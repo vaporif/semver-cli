@@ -1,13 +1,13 @@
 [package]
 name = "semver-cli-check"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 authors = ["Onypko Dmytro <vapori@gmail.com>"]
 repository = "https://github.com/vaporif/semver-cli-check"
 documentation = "https://github.com/vaporif/semver-cli-check"
 description = "cli util to validate semver"
 keywords = ["cargo", "subcommand", "semver"]
-license = "MIT OR Apache-2.0"
+license = "MIT"
 rust-version = "1.76"
 
 [profile.release]
