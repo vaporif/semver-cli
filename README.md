@@ -3,15 +3,15 @@
 
 Small semver version checker cli tool
 
-```
+```shell
 $ semver-cli-check
 ```
 
-Usage: semver-cli-check -r <REQUESTED_VERSION> <VERSION_TO_TEST>
-
-Arguments:
-  <VERSION_TO_TEST>  SemVer to ckeck
-
-Options:
-  -r <REQUESTED_VERSION>      SemVer requirement describing the intersection of some version comparators, such as >=1.2.3, <1.8.
-  -h, --help                  Print help
+>Usage: semver-cli-check -r <REQUESTED_VERSION> <VERSION_TO_TEST>
+>
+>Arguments:
+>  <VERSION_TO_TEST>  SemVer to check
+>
+>Options:
+>  -r <REQUESTED_VERSION>      SemVer requirement describing the intersection of some version comparators, such as >=1.2.3, <1.8.
+>  -h, --help                  Print help
