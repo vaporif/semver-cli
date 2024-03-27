@@ -1,4 +1,4 @@
-name: fmt/clippy/build
+name: ci
 
 on: [pull_request]
 
