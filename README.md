@@ -3,6 +3,21 @@
 
 Small semver version checker cli tool
 
+## Installation
+Binary
+
+```shell
+cargo binstall semver-cli-check
+```
+From Sources
+
+```shell
+cargo install semver-cli-check
+```
+
+
+## Usage
+
 ```shell
 $ semver-cli-check
 ```
